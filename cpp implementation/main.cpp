@@ -5,6 +5,8 @@ using namespace std;
 #include <string>
 #include <vector>
 
+#define MIN_STUDENT_NUM 5
+
 using namespace std;
 
 // Base class Student
@@ -267,22 +269,22 @@ int main() {
     cout << "Enter number of UG students: ";
     cin >> number_ug;
 
-    while (number_ug < 3 && number_ug != 0) {
+    while (number_ug < MIN_STUDENT_NUM && number_ug != 0) {
         cout << "Enter number greater than 10: ";
         cin >> number_ug;
     }
 
-    vector<UGStudent> arr_ug();
+    vector<UGStudent> arr_ug;
 
     cout << "Enter number of PG students: ";
     cin >> number_pg;
 
-    while (number_pg < 3 && number_pg != 0) {
+    while (number_pg < MIN_STUDENT_NUM && number_pg != 0) {
         cout << "Enter number greater than 10: ";
         cin >> number_pg;
     }
 
-    vector<PGStudent> arr_pg();
+    vector<PGStudent> arr_pg;
 
     // UG student records
     if (number_ug != 0) {
